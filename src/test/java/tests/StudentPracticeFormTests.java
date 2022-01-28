@@ -1,7 +1,9 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -18,6 +20,12 @@ public class StudentPracticeFormTests {
     }
 
     @Test
+    @Owner("aippolitov")
+    @Feature("Main menu")
+    @Story("Menu Issue")
+    @DisplayName("Registration Form Page test. Simple Selenide test")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "BaseURL", url = "https://demoqa.com")
     void successfulFillTestWithVariables() {
         String firstName = "Анна",
                 lastName = "Ипполитова",

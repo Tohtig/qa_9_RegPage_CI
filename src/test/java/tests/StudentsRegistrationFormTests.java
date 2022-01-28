@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import com.github.javafaker.Faker;
 import tests.pages.StudentsRegistrationFormPage;
@@ -11,6 +13,12 @@ public class StudentsRegistrationFormTests {
     Faker faker;
 
     @Test
+    @Owner("aippolitov")
+    @Feature("Main menu")
+    @Story("Menu Issue")
+    @DisplayName("Registration Form Page test. Page Object pattern")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "BaseURL", url = "https://demoqa.com")
     void successfulFillFormTest() {
         studentsRegistrationFormPage = new StudentsRegistrationFormPage();
         studentsRegistrationFormPage.openPage();
@@ -19,6 +27,12 @@ public class StudentsRegistrationFormTests {
     }
 
     @Test
+    @Owner("aippolitov")
+    @Feature("Main menu")
+    @Story("Menu Issue")
+    @DisplayName("Registration Form Page test. Use com.github.javafaker.Faker")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "BaseURL", url = "https://demoqa.com")
     void successfulFillFormTestWithFacker() {
         faker = new Faker(new Locale("en"));
         studentsRegistrationFormPage = new StudentsRegistrationFormPage(faker);
