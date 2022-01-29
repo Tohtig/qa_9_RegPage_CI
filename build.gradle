@@ -28,20 +28,31 @@ tasks.withType(JavaCompile) {
 
 allure {
     report {
-        version.set("${allureVersion}")
+        version.set(allureVersion)
     }
     adapter {
         autoconfigure.set(true)
         aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("${allureVersion}")
+                adapterVersion.set(allureVersion)
             }
         }
     }
 
 }
 
-test {
+//test {
+//    useJUnitPlatform()
+//}
+
+tasks.withType(Test) {
     useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }

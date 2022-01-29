@@ -8,7 +8,7 @@ import tests.pages.StudentsRegistrationFormPage;
 
 import java.util.Locale;
 
-public class StudentsRegistrationFormTests {
+public class StudentsRegistrationFormTests extends TestBase{
     StudentsRegistrationFormPage studentsRegistrationFormPage;
     Faker faker;
 
@@ -18,7 +18,7 @@ public class StudentsRegistrationFormTests {
     @Story("Menu Issue")
     @DisplayName("Registration Form Page test. Page Object pattern")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(name = "BaseURL", url = "https://demoqa.com")
+    @Link(name = "BaseURL", url = "https://demoqa.com/automation-practice-form")
     void successfulFillFormTest() {
         studentsRegistrationFormPage = new StudentsRegistrationFormPage();
         studentsRegistrationFormPage.openPage();
@@ -32,7 +32,7 @@ public class StudentsRegistrationFormTests {
     @Story("Menu Issue")
     @DisplayName("Registration Form Page test. Use com.github.javafaker.Faker")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(name = "BaseURL", url = "https://demoqa.com")
+    @Link(name = "BaseURL", url = "https://demoqa.com/automation-practice-form")
     void successfulFillFormTestWithFacker() {
         faker = new Faker(new Locale("en"));
         studentsRegistrationFormPage = new StudentsRegistrationFormPage(faker);

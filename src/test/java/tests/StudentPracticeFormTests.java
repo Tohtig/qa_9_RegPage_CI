@@ -19,7 +19,7 @@ public class StudentPracticeFormTests {
         Configuration.startMaximized = true;
     }
 
-    @Test
+//    @Test
     @Owner("aippolitov")
     @Feature("Main menu")
     @Story("Menu Issue")
